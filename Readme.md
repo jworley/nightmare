@@ -61,6 +61,7 @@ The available options are:
 * `timeout`: how long to wait for page loads, default `5000ms`
 * `interval`: how frequently to poll for page load state, default `50ms`
 * `port`: port to mount the phantomjs instance to, default `12301`
+* `weak`: set dnode weak option. For windows users, will fix cpp compilation issues. default `true`
 
 #### .goto(url)
 Load the page at `url`.
@@ -76,6 +77,9 @@ Refresh the current page.
 
 #### .url(cb)
 Get the url of the current page, the signature of the callback is `cb(url)`.
+
+#### .title(cb)
+Get the title of the current page, the signature of the callback is `cb(title)`.
 
 #### .click(selector)
 Clicks the `selector` element once.
